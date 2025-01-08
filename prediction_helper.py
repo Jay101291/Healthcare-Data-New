@@ -1,4 +1,4 @@
-pip install joblib
+
 import pandas as pd
 import joblib
 model_young = joblib.load("artifacts\model_young.joblib")
