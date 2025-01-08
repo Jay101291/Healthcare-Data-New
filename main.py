@@ -1,4 +1,15 @@
-# codebasics ML course: codebasics.io, all rights reserverd
+import os
+import streamlit as st
+
+file_path = "/mount/admin/install_path"
+
+# Debug and handle missing file
+if not os.path.exists(file_path):
+    st.error(f"Required file not found: {file_path}")
+else:
+    with open(file_path, 'r') as f:
+        data = f.read()
+        st.write("File contents:", data)
 
 import streamlit as st
 from prediction_helper import predict
