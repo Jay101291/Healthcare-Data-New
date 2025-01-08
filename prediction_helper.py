@@ -1,7 +1,7 @@
+pip install -r requirements.txt
 pip install joblib
 import pandas as pd
 import joblib
-
 model_young = joblib.load("artifacts\model_young.joblib")
 model_rest = joblib.load("artifacts\model_rest.joblib")
 scaler_young = joblib.load("artifacts\scaler_young.joblib")
