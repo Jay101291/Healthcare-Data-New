@@ -1,4 +1,3 @@
-pip install jobli
 import pandas as pd
 import joblib
 
