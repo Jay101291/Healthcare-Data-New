@@ -1,9 +1,15 @@
 import pandas as pd
 import joblib
-model_young = joblib.load("artifacts\model_young.joblib")
-model_rest = joblib.load("artifacts\model_rest.joblib")
-scaler_young = joblib.load("artifacts\scaler_young.joblib")
-scaler_rest = joblib.load("artifacts\scaler_rest.joblib")
+import os
+
+# Define the base path for your artifacts
+artifacts_path = r"D:\CodeBasics (ML)\Healthcare Premium Prediction_Project_1\app\artifacts"
+
+# Use os.path.join for compatibility
+model_young = joblib.load(os.path.join(artifacts_path, "model_young.joblib"))
+model_rest = joblib.load(os.path.join(artifacts_path, "model_rest.joblib"))
+scaler_young = joblib.load(os.path.join(artifacts_path, "scaler_young.joblib"))
+scaler_rest = joblib.load(os.path.join(artifacts_path, "scaler_rest.joblib"))
 
 def calculate_normalized_risk(medical_history):
     risk_scores = {
