@@ -1,4 +1,3 @@
-pip install -r requirements.txt
 pip install joblib
 import pandas as pd
 import joblib
