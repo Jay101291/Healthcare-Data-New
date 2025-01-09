@@ -6,7 +6,7 @@ import pickle
 
 # Cache data-related functions
 @st.cache_data
-def load_data("D:\CodeBasics (ML)\Healthcare Premium Prediction_Project_1\Updated Proejct"):
+def load_data(r"D:\CodeBasics (ML)\Healthcare Premium Prediction_Project_1\Updated Proejct"):
     # Read Excel file directly from the uploaded file object
     return pd.read_excel(uploaded_file)
 
@@ -22,7 +22,7 @@ def load_model(file_path):
 st.title("Insurance Premium Prediction App")
 
 # File uploader for dataset
-uploaded_file = st.file_uploader("D:\CodeBasics (ML)\Healthcare Premium Prediction_Project_1\Updated Proejct", type=["xlsx"])
+uploaded_file = st.file_uploader(r"D:\CodeBasics (ML)\Healthcare Premium Prediction_Project_1\Updated Proejct", type=["xlsx"])
 if uploaded_file:
     # Preprocess and display the dataset
     data = load_data(uploaded_file)
